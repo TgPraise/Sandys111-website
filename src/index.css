@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal text-cream font-body antialiased;
+  }
+
+  ::selection {
+    background: #c2924a;
+    color: #14110f;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c2924a;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: theme("backgroundImage.grain");
+    mix-blend-mode: overlay;
+  }
+
+  .hairline-dark {
+    border-color: rgba(246, 241, 230, 0.1);
+  }
+
+  .hairline-light {
+    border-color: rgba(30, 25, 19, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px rgba(194, 146, 74, 0.45), 0 0 70px rgba(194, 146, 74, 0.15);
+  }
+}
