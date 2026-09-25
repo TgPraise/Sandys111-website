@@ -10,6 +10,7 @@ import Admin from "./pages/Admin";
 import Book from "./pages/Book";
 import VenueHire from "./pages/VenueHire";
 import Careers from "./pages/Careers";
+import About from "./pages/About";
 import ComingSoon from "./pages/ComingSoon";
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
           <Route path="/order" element={<Order />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:slug" element={<ComingSoon title="Event Details" />} />
-          <Route path="/about" element={<ComingSoon title="About Sandy's 111" />} />
+          <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<ComingSoon title="Gallery" />} />
           <Route path="/venue-hire" element={<VenueHire />} />
           <Route path="/careers" element={<Careers />} />
